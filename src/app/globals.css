@@ -2,26 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@media (max-width: 640px) {
+  .hide-below-650vh {
+    display: none;
+  }
+  .bg-image-homepage {
+    background-size: 150% !important;
+    margin-top: 5rem;
+  }
+  #pat-she {
+    height: 12rem !important;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media (min-width: 641px) and (max-width: 1024px) {
+  .bg-image-homepage {
+    background-size: 80% !important;
+  }
+}
+
+@media (max-height: 640px) {
+  .show-below-650vh {
+    display: block;
+  }
+}
+
+.bg-image-homepage {
+  background-image: url("/images/bgImage.jpg");
+  background-position: right;
+  background-size: 70%;
+  opacity: 0.5;
+  z-index: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  left: 0px;
 }
