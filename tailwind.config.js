@@ -14,6 +14,12 @@ module.exports = {
       },
       rotate: {
         '270': '270deg',
+      },
+      borderRadius: {
+        '4xl': '2.5rem',
+      },
+      lineHeight: {
+        '0': '0px'
       }
     },
   },

@@ -13,11 +13,17 @@
   #pat-she {
     height: 12rem !important;
   }
+  .invite-numbers {
+    font-size: 10rem !important;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
   .bg-image-homepage {
     background-size: 80% !important;
+  }
+  .invite-numbers {
+    font-size: 15rem !important;
   }
 }
 
@@ -30,7 +36,7 @@
 .bg-image-homepage {
   background-image: url("/images/bgImage.jpg");
   background-position: right;
-  background-size: 70%;
+  background-size: 80%;
   opacity: 0.5;
   z-index: 0;
   background-repeat: no-repeat;
@@ -40,4 +46,11 @@
   right: 0px;
   bottom: 0;
   left: 0px;
+}
+
+.invite-numbers {
+  -webkit-text-stroke-color: lightgray;
+  -webkit-text-stroke-width: 1px;
+  opacity: 7;
+  font-size: 20rem;
 }
