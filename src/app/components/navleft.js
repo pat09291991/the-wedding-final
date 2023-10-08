@@ -1,17 +1,8 @@
 "use client"
 
+import smoothScroll from "./smoothscroll"
+
 export default function Navleft() {
-
-    function smoothScroll(targetId) {
-        const target = document.getElementById(targetId);
-
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop,
-                behavior: 'smooth', // This enables smooth scrolling
-            });
-        }
-    }
 
     return (
         <ul className='navleftFont h-full flex flex-col justify-between fixed top-0 z-10 h-full pl-12 py-12 hide-below-650vh'>

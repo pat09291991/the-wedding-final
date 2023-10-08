@@ -12,7 +12,7 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import { useState } from "react";
 import photos from "./photos";
 
-export default function PatShePhotos({toggleGallery}) {
+export default function PatShePhotos({ toggleGallery }) {
     const [index, setIndex] = useState(-1);
     const breakpoints = [3840, 2400, 1080, 640, 384, 256, 128, 96, 64, 48];
     // const photos = [
@@ -33,8 +33,9 @@ export default function PatShePhotos({toggleGallery}) {
                 plugins={[Fullscreen, Slideshow, Zoom]}
             />
             <div
-            onClick={toggleGallery}
-            className="fixed bottom-4 left-1/2 flex items-center justify-center w-20 h-20 rounded-full bg-gray-200 bg-opacity-70 cursor-pointer">
+                onClick={toggleGallery}
+                className="fixed bottom-4 left-1/2 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-20 h-20 rounded-full bg-gray-200 bg-opacity-70 cursor-pointer"
+            >
                 <p className="text-3xl text-gray-900">X</p>
             </div>
         </>

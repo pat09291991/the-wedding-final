@@ -11,6 +11,7 @@ import Gallery from './gallery'
 import MobileNavbar from './mobileNavbar'
 import { useInView } from 'react-intersection-observer'
 import PatShePhotos from './patshephotos'
+import smoothScroll from './smoothscroll'
 
 function MainPage() {
     const { scrollYProgress } = useScroll();
@@ -28,6 +29,9 @@ function MainPage() {
     const toggleGallery = () => {
         if (progress == 100) {
             setProgress(0)
+            setTimeout(() => {
+                smoothScroll('pat-she')
+            }, 100)
         }
     }
 
@@ -59,7 +63,7 @@ function MainPage() {
                                 <img src="/images/patShe2.png" className='z-10 h-60 mb-64 sm:mb-0 md:h-96' id="pat-she" />
                                 <div className="bg-image-homepage"></div>
                             </div>
-                            <div className='hidden sm:block show-below-650vh'>
+                            <div className='hidden sm:block show-below-650vh' id="nav-left">
                                 <Navleft />
                             </div>
                             <div className='hidden sm:block sh'>

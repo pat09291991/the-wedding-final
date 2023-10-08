@@ -1,6 +1,7 @@
 import React from "react"
 import { useInView } from 'react-intersection-observer';
 import { delay, motion } from 'framer-motion';
+import smoothScroll from "./smoothscroll";
 
 export default function StoryPage() {
     const [containerRef, containerInView] = useInView({
@@ -41,17 +42,6 @@ export default function StoryPage() {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
     };
-
-    function smoothScroll(targetId) {
-        const target = document.getElementById(targetId);
-
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop,
-                behavior: 'smooth', // This enables smooth scrolling
-            });
-        }
-    }
 
     return (
 
