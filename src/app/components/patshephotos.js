@@ -20,7 +20,7 @@ export default function PatShePhotos({ toggleGallery }) {
     //     { src: "/images/homeImage2.jpg", width: 800, height: 600 },
     //     { src: "/images/homeImage3.jpg", width: 800, height: 600 },
     // ];
-
+    console.log(photos)
     return (
         <>
             <PhotoAlbum photos={photos} layout="rows" targetRowHeight={500} onClick={({ index }) => setIndex(index)} />

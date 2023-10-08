@@ -12,6 +12,8 @@ import MobileNavbar from './mobileNavbar'
 import { useInView } from 'react-intersection-observer'
 import PatShePhotos from './patshephotos'
 import smoothScroll from './smoothscroll'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 function MainPage() {
     const { scrollYProgress } = useScroll();
@@ -36,7 +38,7 @@ function MainPage() {
     }
 
     const toggleUp = () => {
-        smoothScroll('pat-she')
+        smoothScroll('home')
     }
 
     return (
@@ -89,9 +91,9 @@ function MainPage() {
                             </div>
                             <div
                                 onClick={toggleUp}
-                                className="fixed bottom-4 right-4 flex items-center justify-center w-20 h-20 rounded-full bg-gray-200 bg-opacity-80 cursor-pointer"
+                                className="block sm:hidden fixed bottom-4 right-4 flex items-center justify-center w-20 h-20 rounded-full bg-gray-200 bg-opacity-80 cursor-pointer"
                             >
-                                <p className="text-2xl text-gray-900">X</p>
+                                <FontAwesomeIcon icon={faChevronUp} />
                             </div>
                         </main>
                     </motion.div>
