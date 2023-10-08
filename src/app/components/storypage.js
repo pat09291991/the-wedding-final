@@ -28,15 +28,34 @@ export default function StoryPage() {
         rootMargin: '-100px 0px', // Adjust the offset as needed
     });
 
+    const [imageRef3, imageInView3] = useInView({
+        triggerOnce: true,
+        rootMargin: '-100px 0px', // Adjust the offset as needed
+    });
+    const [imageRef4, imageInView4] = useInView({
+        triggerOnce: true,
+        rootMargin: '-100px 0px', // Adjust the offset as needed
+    });
+
     const fadeIn = {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
     };
 
+    function smoothScroll(targetId) {
+        const target = document.getElementById(targetId);
+
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop,
+                behavior: 'smooth', // This enables smooth scrolling
+            });
+        }
+    }
+
     return (
 
-        <div className='min-h-screen py-12 px-3' ref={containerRef}>
-
+        <div className='min-h-screen pt-12 pb-16 px-3' ref={containerRef}>
             <div className="flex flex-col sm:items-center mb-12">
                 <div>
                     <motion.div
@@ -81,8 +100,10 @@ export default function StoryPage() {
                         <span className="text-lg sm:text-xl text-gray-500">Please join us as we</span><br />
                         <span className="text-lg sm:text-xl text-gray-500">exchange our sacred vows</span><br />
                         <span className="text-lg sm:text-xl text-gray-500">and solemnly pronounce our</span><br />
-                        <span className="text-lg sm:text-xl text-gray-500">commitment by saying 'I do'.</span><br /><br />
-                        <span className="text-xl mt-8 font-semibold underline underline-offset-8 text-sky-900">RSVP</span>
+                        <span className="text-lg sm:text-xl text-gray-500">commitment by saying {'I do'}.</span><br /><br />
+                        <span onClick={() => smoothScroll('rsvp')} className="cursor-pointer text-xl mt-8 font-semibold underline underline-offset-8 text-sky-900">
+                            RSVP
+                        </span>
                     </motion.p>
                 </div>
             </div>
@@ -103,16 +124,19 @@ export default function StoryPage() {
                             </span>
                         </motion.p>
 
-                        <motion.img
-                            ref={imageRef} // Attach the ref to the image
-                            initial="hidden"
-                            animate={imageInView ? 'visible' : 'hidden'}
-                            variants={fadeIn}
-                            transition={{ duration: 1 }}
-                            src="/images/1stimage.jpg"
-                            alt="An animated image"
-                            className="z-10 rounded-[2.5rem] relative w-1/2 sm:w-1/2"
-                        />
+                        <div className="flex items-center">
+                            <motion.img
+                                ref={imageRef} // Attach the ref to the image
+                                initial="hidden"
+                                animate={imageInView ? 'visible' : 'hidden'}
+                                variants={fadeIn}
+                                transition={{ duration: 1 }}
+                                src="/images/1stimage.jpg"
+                                alt="An animated image"
+                                className="z-10 rounded-[2.5rem] relative w-1/2 sm:w-1/2 me-2"
+                            />
+                            <p className="text-xs sm:text-xl text-gray-500"><span className="font-semibold">Symphony Cruise:</span> He asked, "Tara pakasal na tayo?"</p>
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-col items-end relative sm:ml-36 -mt-24 sm:-mt-36 z-0">
@@ -127,25 +151,70 @@ export default function StoryPage() {
                             alt="An animated image"
                             className="z-40 rounded-[2.5rem] relative w-full sm:w-full"
                         />
-                    <motion.div
-                        ref={ref} // Attach the ref to the motion.div
+                        <motion.div
+                            ref={ref} // Attach the ref to the motion.div
+                            initial="hidden"
+                            animate={inView ? 'visible' : 'hidden'} // Trigger animation when in view
+                            variants={{
+                                hidden: { opacity: 0 },
+                                visible: { opacity: 1, transition: { delay: 1 } },
+                            }}
+                            transition={{ duration: 1 }}
+                        >
+                            <p className="mb-12 z-0 relative leading-[0] mt-8 sm:mt-24 text-end">
+                                <span className="pb-4 text-[12rem] text-transparent invite-numbers">
+                                    21
+                                </span>
+                            </p>
+                        </motion.div>
+                    </div>
+                </div>
+                <div className="flex flex-col sm:flex-col-reverse mb-12">
+                    <div className="relative">
+                        <div className="flex items-center">
+                            <motion.img
+                                ref={imageRef3} // Attach the ref to the image
+                                initial="hidden"
+                                animate={imageInView3 ? 'visible' : 'hidden'}
+                                variants={fadeIn}
+                                transition={{ duration: 1 }}
+                                src="/images/ring.jpg"
+                                alt="An animated image"
+                                className="z-10 rounded-[2.5rem] relative w-1/2 sm:w-1/2 me-2"
+                            />
+                            <p className="text-xs sm:text-xl text-gray-500">She said <span className="font-semibold">YES!</span> </p>
+                        </div>
+                        <motion.div
+                            ref={ref} // Attach the ref to the motion.div
+                            initial="hidden"
+                            animate={imageInView3 ? 'visible' : 'hidden'} // Trigger animation when in view
+                            variants={{
+                                hidden: { opacity: 0 },
+                                visible: { opacity: 1, transition: { delay: 1 } },
+                            }}
+                            transition={{ duration: 1 }}
+                        >
+                            <p className="mb-12 z-0 relative leading-[0] mt-8 sm:mt-24 md:mt-18">
+                                <span className="pb-4 text-[12rem] text-transparent invite-numbers">
+                                    23
+                                </span>
+                            </p>
+                        </motion.div>
+                    </div>
+                </div>
+                <div className="flex flex-col items-end relative -mt-48 sm:-mt-96 z-0">
+                    <motion.img
+                        ref={imageRef4} // Attach the ref to the image
                         initial="hidden"
-                        animate={inView ? 'visible' : 'hidden'} // Trigger animation when in view
-                        variants={{
-                            hidden: { opacity: 0 },
-                            visible: { opacity: 1, transition: { delay: 1 } },
-                        }}
+                        animate={imageInView4 ? 'visible' : 'hidden'}
+                        variants={fadeIn}
                         transition={{ duration: 1 }}
-                    >
-                        <p className="mb-12 z-0 relative leading-[0] mt-12 sm:mt-24 text-end">
-                            <span className="pb-4 text-[12rem] text-transparent invite-numbers">
-                                21
-                            </span>
-                        </p>
-                    </motion.div>
+                        src="/images/cruise.jpg"
+                        alt="An animated image"
+                        className="z-40 rounded-[2.5rem] relative w-2/3 sm:w-2/3"
+                    />
                 </div>
             </div>
         </div>
-        </div >
     )
 }

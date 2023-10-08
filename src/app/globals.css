@@ -17,7 +17,7 @@
   }
 
   .invite-numbers {
-    font-size: 10rem !important;
+    font-size: 7rem !important;
   }
 }
 
@@ -27,7 +27,7 @@
   }
 
   .invite-numbers {
-    font-size: 15rem !important;
+    font-size: 12rem !important;
   }
 }
 
@@ -113,8 +113,8 @@
 }
 
 
-.navleftFont{
-  font-family: Montserrat-Light,sans-serif!important;
+.navleftFont {
+  font-family: Montserrat-Light, sans-serif !important;
   color: #284135;
   font-size: .72222vw;
   line-height: 1.38889vw;
@@ -130,6 +130,7 @@
     transform-origin: left;
     color: #072a4b;
   }
+
   100% {
     transform: scaleX(1);
     transform-origin: left;
@@ -151,4 +152,25 @@
   background-color: #072a4b !important;
 }
 
+/* Add CSS for your component and animations */
+.hold-tap-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+.hold-tap-box {
+  width: 200px;
+  height: 100px;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hold-tap-box.tapped {
+  background-color: #2ecc71;
+}

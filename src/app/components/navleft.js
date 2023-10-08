@@ -26,7 +26,7 @@ export default function Navleft() {
                     <p className="rotate-[270deg] transform origin-left me-12">
                         <span onClick={() => smoothScroll('gallery')} className="cursor-pointer relative inline-block group">
                             GALLERY
-                            <div className="absolute left-0 bottom-0 w-full h-0.5 bg-indigo-500 transform origin-left scale-x-0 transition-transform group-hover:scale-x-100"></div>
+                            <span className="absolute left-0 bottom-0 w-full h-0.5 bg-indigo-500 transform origin-left scale-x-0 transition-transform group-hover:scale-x-100"></span>
                         </span>
                     </p>
                 </div>
@@ -36,9 +36,9 @@ export default function Navleft() {
 
                 <div className="relative">
                     <p className="rotate-[270deg] transform origin-left me-12 mt-16" >
-                        <span onClick={() => smoothScroll('RSVP')} className="cursor-pointer relative inline-block group">
+                        <span onClick={() => smoothScroll('rsvp')} className="cursor-pointer relative inline-block group">
                             RSVP
-                            <div className="absolute left-0 bottom-0 w-full h-0.5 bg-indigo-500 transform origin-left scale-x-0 transition-transform group-hover:scale-x-100"></div>
+                            <span className="absolute left-0 bottom-0 w-full h-0.5 bg-indigo-500 transform origin-left scale-x-0 transition-transform group-hover:scale-x-100"></span>
                         </span>
                     </p>
                 </div>
@@ -47,9 +47,9 @@ export default function Navleft() {
 
                 <div className="relative">
                     <p className="rotate-[270deg] transform origin-left me-12 mt-16">
-                        <span onClick={() => smoothScroll('FAQ')} className="cursor-pointer relative inline-block group">
+                        <span onClick={() => smoothScroll('faq')} className="cursor-pointer relative inline-block group">
                             FAQ
-                            <div className="absolute left-0 bottom-0 w-full h-0.5 bg-indigo-500 transform origin-left scale-x-0 transition-transform group-hover:scale-x-100"></div>
+                            <span className="absolute left-0 bottom-0 w-full h-0.5 bg-indigo-500 transform origin-left scale-x-0 transition-transform group-hover:scale-x-100"></span>
                         </span>
                     </p>
                 </div>

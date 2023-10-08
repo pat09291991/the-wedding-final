@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import MainPage from './components/mainPage'
 import SnowflakeAnimation from './components/SnowflakeAnimation';
+import PatShePhotos from './components/patshephotos';
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -21,7 +22,7 @@ function Home() {
     <>
       <SnowflakeAnimation loading={loading} />
       {!loading ?
-          <MainPage />
+        <MainPage />
         :
         ""
       }

@@ -40,7 +40,7 @@ export default function Faq() {
                                         <p>{section.content1}</p><br/>
                                         {section.image == 'venue_church' ?
                                             <div className="flex justify-center items-center">
-                                                <img src="/images/church.jpeg" className="w-1/3 h-1/3" />
+                                                <img src="/images/church.jpeg" className="w-1/3 h-1/3" alt="church" />
                                             </div>
                                             : ""}
                                         <br />
@@ -51,7 +51,7 @@ export default function Faq() {
 
                                                 {section.image == 'venue_church' ?
                                                     <div className="flex justify-center items-center">
-                                                        <img src="/images/venue.jpeg" className="w-1/3 h-1/3" />
+                                                        <img src="/images/venue.jpeg" className="w-1/3 h-1/3" alt="venue" />
                                                     </div>
                                                     : ""}
                                                 <br />
