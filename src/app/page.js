@@ -21,7 +21,7 @@ function Home() {
     <>
       <SnowflakeAnimation loading={loading} />
       {!loading ?
-        <MainPage />
+          <MainPage />
         :
         ""
       }
