@@ -217,3 +217,11 @@
 .adam {
 font-family: Adam;
 }
+.hoverable-text {
+  cursor: pointer;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+.hoverable-text:hover {
+  border-bottom: 2px solid blue; /* Change this to the desired border style */
+}

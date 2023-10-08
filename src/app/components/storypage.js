@@ -123,9 +123,9 @@ export default function StoryPage() {
                                 transition={{ duration: 1 }}
                                 src="/images/1stimage.jpg"
                                 alt="An animated image"
-                                className="z-10 rounded-[2.5rem] relative w-1/2 sm:w-1/2 me-2"
+                                className="z-10 rounded-[2.5rem] relative w-1/2 sm:w-1/2 me-10"
                             />
-                            <p className="text-xs sm:text-xl text-gray-500"><span className="font-semibold">Symphony Cruise:</span> He asked, "Tara pakasal na tayo?"</p>
+                            <p className="text-xs sm:text-xl text-gray-500"><span className="font-semibold adam ">Symphony Cruise:</span> He asked, "Tara pakasal na tayo?"</p>
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@ export default function StoryPage() {
                                 transition={{ duration: 1 }}
                                 src="/images/ring.jpg"
                                 alt="An animated image"
-                                className="z-10 rounded-[2.5rem] relative w-1/2 sm:w-1/2 me-2"
+                                className="z-10 rounded-[2.5rem] relative w-1/2 sm:w-1/2 me-10"
                             />
                             <p className="text-xs sm:text-xl text-gray-500">She said <span className="font-semibold">YES!</span> </p>
                         </div>
