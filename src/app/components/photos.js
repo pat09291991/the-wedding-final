@@ -27,7 +27,7 @@ const photos = unsplashPhotos.map((photo) => {
         srcSet: breakpoints.map((breakpoint) => {
             const height = Math.round((photo.height / photo.width) * breakpoint);
             return {
-                src: unsplashLink(photo.id, breakpoint, height),
+                src: "/images/Image20231008163748.jpg",
                 width: breakpoint,
                 height,
             };
