@@ -18,8 +18,8 @@ export default function Faq() {
 
     return (
         <div className="max-w-xl mx-auto min-h-screen py-12 px-3 flex flex-col justify-center items-center">
-            <p className="text-4xl text-white mb-16 text-center">Frequently Asked Questions</p>
-            <div className="w-full py-12 px-2 rounded-2xl shadow-xl shadow-black text-white" style={{backgroundColor: "rgba(255, 255, 255, 0.2)"}}>
+            <p className="bluecolor text-4xl  mb-16 text-center">Frequently Asked Questions</p>
+            <div className="w-full py-12 px-2 rounded-2xl shadow-xl shadow-black bluecolor" style={{backgroundColor: "rgb(255 255 255)"}}>
                 <div className="w-full">
                     {sections.map((section, index) => {
                         let key = index + 1;

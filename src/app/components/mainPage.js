@@ -86,7 +86,7 @@ function MainPage() {
                             <div id="rsvp" className='h-screen sm:px-32'>
                                 <Rsvp />
                             </div>
-                            <div id="faq" className='bg-sky-900 min-h-screen sm:px-32'>
+                            <div id="faq" className='bg-slate-100 min-h-screen sm:px-32'>
                                 <Faq />
                             </div>
                             <div

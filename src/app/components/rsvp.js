@@ -47,12 +47,12 @@ export default function Rsvp() {
     return (
         <div className='h-screen py-12 px-3 flex flex-col justify-center items-center'>
             <div>
-                <p className="text-7xl mb-4 text-center">Kindly <span>RSVP</span></p>
-                <p className="mb-6 text-center">before October 30, 2023</p>
+                <p className="text-7xl mb-4 text-center bluecolor">Kindly <span>RSVP</span></p>
+                <p className="bluecolor mb-6 text-center">before October 30, 2023</p>
 
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4 text-center">
-                        <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="fullName" className="bluecolor block text-sm font-medium text-gray-700">
                             Full Name
                         </label>
                         <input

@@ -229,3 +229,9 @@ font-family: Adam;
 .react-photo-album--photo {
   object-fit: cover;
 }
+
+.bluecolor{
+  color:#284135;
+  font-family: "Adam";
+  font-weight: 800;
+}
