@@ -225,3 +225,7 @@ font-family: Adam;
 .hoverable-text:hover {
   border-bottom: 2px solid blue; /* Change this to the desired border style */
 }
+
+.react-photo-album--photo {
+  object-fit: cover;
+}

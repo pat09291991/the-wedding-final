@@ -9,10 +9,10 @@ const unsplashPhotos = [
     { filename: "4.jpg", width: 1080, height: 1549 },
     { filename: "5.jpg", width: 1080, height: 720 },
     { filename: "6.jpg", width: 1080, height: 720 },
-    { filename: "9UjEyzA6pP4", width: 1080, height: 1620 },
-    { filename: "sEXGgun3ZiE", width: 1080, height: 720 },
-    { filename: "S-cdwrx-YuQ", width: 1080, height: 1440 },
-    { filename: "q-motCAvPBM", width: 1080, height: 1620 },
+    { filename: "7.jpg", width: 1080, height: 1620 },
+    { filename: "8.jpg", width: 1080, height: 720 },
+    { filename: "9.jpg", width: 1080, height: 1440 },
+    { filename: "10.jpg", width: 1080, height: 1620 },
 ];
 
 const photos = unsplashPhotos.map((photo) => {
