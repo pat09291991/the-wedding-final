@@ -66,7 +66,7 @@ export default function StoryPage() {
                 </div>
             </div>
 
-            <div className="flex flex-col items-end mb-24 sm:pe-24">
+            <div className="flex flex-col items-end mb-24 sm:pe-96">
                 <div>
                     <motion.p
                         ref={paragraphRef}
@@ -87,10 +87,10 @@ export default function StoryPage() {
                         variants={fadeIn}
                         transition={{ duration: 1 }}
                     >
-                        <span className="text-lg sm:text-xl text-gray-500">Please join us as we</span><br />
-                        <span className="text-lg sm:text-xl text-gray-500">exchange our sacred vows</span><br />
-                        <span className="text-lg sm:text-xl text-gray-500">and solemnly pronounce our</span><br />
-                        <span className="text-lg sm:text-xl text-gray-500">commitment by saying {'I do'}.</span><br /><br />
+                        <span className="adam text-lg sm:text-xl text-gray-500">Please join us as we</span><br />
+                        <span className="adam text-lg sm:text-xl text-gray-500">exchange our sacred vows</span><br />
+                        <span className="adam text-lg sm:text-xl text-gray-500">and solemnly pronounce our</span><br />
+                        <span className="adam text-lg sm:text-xl text-gray-500">commitment by saying {'I do'}.</span><br /><br />
                         <span onClick={() => smoothScroll('rsvp')} className="cursor-pointer text-xl mt-8 font-semibold underline underline-offset-8 text-sky-900">
                             RSVP
                         </span>
@@ -114,7 +114,7 @@ export default function StoryPage() {
                             </span>
                         </motion.p>
 
-                        <div className="flex items-center">
+                        <div className="flex items-center sm:-mt-16">
                             <motion.img
                                 ref={imageRef} // Attach the ref to the image
                                 initial="hidden"
@@ -151,7 +151,7 @@ export default function StoryPage() {
                             }}
                             transition={{ duration: 1 }}
                         >
-                            <p className="mb-12 z-0 relative leading-[0] mt-8 sm:mt-24 text-end">
+                            <p className="mb-12 z-0 relative leading-[0] mt-8 sm:mt-28 text-end">
                                 <span className="pb-4 text-[12rem] text-transparent invite-numbers">
                                     21
                                 </span>
@@ -184,7 +184,7 @@ export default function StoryPage() {
                             }}
                             transition={{ duration: 1 }}
                         >
-                            <p className="mb-12 z-0 relative leading-[0] mt-8 sm:mt-24 md:mt-18">
+                            <p className="mb-12 z-0 relative leading-[0] mt-8 sm:mt-28 md">
                                 <span className="pb-4 text-[12rem] text-transparent invite-numbers">
                                     23
                                 </span>

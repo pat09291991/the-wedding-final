@@ -76,14 +76,14 @@ export default function Gallery({progress, setProgress}) {
                                 r="90"
                                 fill="transparent"
                                 stroke="#ccc"
-                                strokeWidth="8" // Adjust the stroke width for thinner/thicker circle
+                                strokeWidth="1" // Adjust the stroke width for thinner/thicker circle
                             />
                             <circle
                                 cx="100"
                                 cy="100"
                                 r="90"
                                 fill="transparent"
-                                stroke="#0073e6"
+                                stroke="#dfe4e9"
                                 strokeWidth="8" // Adjust the stroke width for thinner/thicker progress
                                 strokeLinecap="round"
                                 strokeDasharray="565.48"
