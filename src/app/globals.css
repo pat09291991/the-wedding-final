@@ -111,3 +111,44 @@
   transform: translateY(-100vh);
   /* Adjust the distance as needed */
 }
+
+
+.navleftFont{
+  font-family: Montserrat-Light,sans-serif!important;
+  color: #284135;
+  font-size: .72222vw;
+  line-height: 1.38889vw;
+  letter-spacing: .02778vw;
+  font-weight: 500;
+}
+
+
+/* Define the animation */
+@keyframes borderSlide {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+    color: #072a4b;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+    color: #072a4b;
+  }
+}
+
+
+.group:hover .group-hover\:scale-x-100 {
+  transform: scaleX(1);
+  color: #072a4b;
+}
+
+
+.bg-indigo-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+  display: block;
+  background-color: #072a4b !important;
+}
+
+
