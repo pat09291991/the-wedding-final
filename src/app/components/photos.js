@@ -27,7 +27,11 @@ const photos = unsplashPhotos.map((photo) => {
         srcSet: breakpoints.map((breakpoint) => {
             const height = Math.round((photo.height / photo.width) * breakpoint);
             return {
+<<<<<<< Updated upstream
                 src: unsplashLink(photo.id, width, height),
+=======
+                src: unsplashLink(photo.id, breakpoint, height),
+>>>>>>> Stashed changes
                 width: breakpoint,
                 height,
             };

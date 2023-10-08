@@ -35,10 +35,16 @@ function MainPage() {
         }
     }
 
+    const toggleUp = () => {
+        smoothScroll('pat-she')
+    }
+
     return (
         <>
             {progress == 100 ?
-                <PatShePhotos toggleGallery={toggleGallery} />
+                <div className='w-full'>
+                    <PatShePhotos toggleGallery={toggleGallery} />
+                </div>
                 :
                 <AnimatePresence>
                     <motion.div
@@ -56,7 +62,7 @@ function MainPage() {
                                 className="progress-bar"
                                 style={{ scaleX: scrollYProgress }}
                             />
-                            <div className='block sm:hidden sh'>
+                            <div className='block sm:hidden' id="mobile-nav">
                                 <MobileNavbar />
                             </div>
                             <div className="h-screen flex items-center justify-center">
@@ -80,6 +86,12 @@ function MainPage() {
                             </div>
                             <div id="faq" className='bg-sky-900 min-h-screen sm:px-32'>
                                 <Faq />
+                            </div>
+                            <div
+                                onClick={toggleUp}
+                                className="fixed bottom-4 right-4 flex items-center justify-center w-20 h-20 rounded-full bg-gray-200 bg-opacity-80 cursor-pointer"
+                            >
+                                <p className="text-2xl text-gray-900">X</p>
                             </div>
                         </main>
                     </motion.div>
