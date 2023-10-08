@@ -14,7 +14,7 @@ import photos from "./photos";
 import { motion, useAnimation } from 'framer-motion';
 import PatShePhotos from "./patshephotos";
 
-export default function Gallery({progress, setProgress}) {
+export default function Gallery({ progress, setProgress }) {
     const [index, setIndex] = useState(-1);
     const breakpoints = [3840, 2400, 1080, 640, 384, 256, 128, 96, 64, 48];
 
@@ -89,12 +89,12 @@ export default function Gallery({progress, setProgress}) {
                                 strokeDasharray="565.48"
                                 strokeDashoffset={565.48 - (565.48 * progress) / 100}
                             />
-                   
-                    <text x="50%" y="50%" fontSize="22" textAnchor="middle" dominantBaseline="middle" class="borderSlide hoverable-text">
+
+                            <text x="50%" y="50%" fontSize="22" textAnchor="middle" dominantBaseline="middle" className="borderSlide hoverable-text">
                                 GALLERY
-                                 </text>
-</svg>
-              
+                            </text>
+                        </svg>
+
                     </motion.button>
                 </div>
                 <p>
